@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="cz">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-i18n="pageTitle">IronBase Fitness</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <a href="index.html" class="logo">IronBase</a>
+            <nav>
+                <ul>
+                    <li><a href="index.html" class="active" data-i18n="navHome">Domů</a></li>
+                    <li><a href="#exercises" data-i18n="navExercises">Cviky</a></li>
+                    <li><a href="#nutrition" data-i18n="navNutrition">Strava</a></li>
+                    <li><a href="clenska-zona.html" data-i18n="navMembership">Členská zóna</a></li>
+                    <li><a href="poradna.html" data-i18n="navQa">Poradna</a></li>
+                    <li><a href="songy.html" data-i18n="navSongs">Songy</a></li>
+                    <li><a href="kontakt.html" data-i18n="navContact">Kontakt</a></li>
+                </ul>
+            </nav>
+            <div class="header-actions">
+                <div class="lang-switch">
+                    <button class="lang-btn active" data-lang="cz">CZ</button>
+                    <button class="lang-btn" data-lang="sk">SK</button>
+                    <button class="lang-btn" data-lang="en">EN</button>
+                </div>
+                <div class="auth-buttons" style="display: flex; gap: 0.5rem;">
+                    <a href="ucet.html#login" id="login-btn-nav" class="btn-secondary" style="padding: 0.5rem 1rem;"
+                        data-i18n="btnLogin">Přihlásit se</a>
+                    <a href="ucet.html#register" id="register-btn-nav" class="btn-primary" style="padding: 0.5rem 1rem;"
+                        data-i18n="heroBtnRegister">Registrace</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section id="hero" class="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <h1 data-i18n="heroTitle">Překonej své limity.</h1>
+                    <p data-i18n="heroSubtitle">Tvé tělo je jediný stroj, na kterém musíš pracovat. Objev nejlepší cviky
+                        pro sílu, kondici a zdraví.</p>
+                    <div class="hero-buttons">
+                        <a href="#exercises" class="btn-primary" data-i18n="heroBtnExercises">Prohlédnout cviky</a>
+                        <a href="ucet.html#register" class="btn-secondary" data-i18n="heroBtnRegister">Registrace</a>
+                    </div>
+                </div>
+                <div class="hero-visual">
+                    <div class="glow-circle"></div>
+                    <div class="glass-card">
+                        <h3 data-i18n="statsTitle">Dnešní Trénink</h3>
+                        <div class="workout-stats">
+                            <div class="stat-row">
+                                <span data-i18n="statsBench">Bench Press</span>
+                                <span>4x8</span>
+                            </div>
+                            <div class="stat-row">
+                                <span data-i18n="statsSquat">Dřepy</span>
+                                <span>4x10</span>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="fill"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="quote-banner">
+            <div class="container">
+                <blockquote data-i18n="quote1">"Bolest je slabost opouštějící tělo."</blockquote>
+            </div>
+        </section>
+
+        <section id="exercises" class="exercises">
+            <div class="container">
+                <div class="exercises-header">
+                    <h2 data-i18n="exercisesTitle">Databáze Cviků</h2>
+                    <div class="search-bar">
+                        <input type="text" id="exercise-search" data-i18n-placeholder="searchPlaceholder"
+                            placeholder="Hledat cvik...">
+                    </div>
+                </div>
+                <div class="exercises-grid">
+                    <div class="exercise-card">
+                        <div class="icon">🏋️‍♂️</div>
+                        <h3 data-i18n="exBenchTitle">Bench Press</h3>
+                        <p data-i18n="exBenchDesc">Král cviků na hrudník. Buduje masivní sílu prsních svalů, ramen a
+                            tricepsů.</p>
+                        <div class="tags"><span data-i18n="tagChest">Hrudník</span><span
+                                data-i18n="tagStrength">Síla</span></div>
+                    </div>
+                    <!-- Other cards simplified here -->
+                    <div class="exercise-card">
+                        <div class="icon">🦵</div>
+                        <h3 data-i18n="exSquatTitle">Dřepy</h3>
+                        <p data-i18n="exSquatDesc">Základní cvik pro silné nohy a pevný střed těla.</p>
+                        <div class="tags"><span data-i18n="tagLegs">Nohy</span><span data-i18n="tagFullBody">Celé
+                                tělo</span></div>
+                    </div>
+                    <div class="exercise-card">
+                        <div class="icon">⚙️</div>
+                        <h3 data-i18n="exLegPressTitle">Leg Press</h3>
+                        <p data-i18n="exLegPressDesc">Skvělý stroj na budování svalů nohou bez zatížení zad.</p>
+                        <div class="tags"><span data-i18n="tagLegs">Nohy</span><span data-i18n="tagStrength">Síla</span>
+                        </div>
+                    </div>
+                    <div class="exercise-card">
+                        <div class="icon">🎭</div>
+                        <h3 data-i18n="exFacePullTitle">Face Pulls</h3>
+                        <p data-i18n="exFacePullDesc">Klíčový cvik pro zdraví ramen a zadní delty.</p>
+                        <div class="tags"><span data-i18n="tagShoulders">Ramena</span><span
+                                data-i18n="tagStability">Stabilita</span></div>
+                    </div>
+                    <div class="exercise-card">
+                        <div class="icon">🔨</div>
+                        <h3 data-i18n="exHammerTitle">Hammer Curls</h3>
+                        <p data-i18n="exHammerDesc">Varianta na bicák, která buduje i sílu předloktí.</p>
+                        <div class="tags"><span data-i18n="tagArms">Paže</span><span
+                                data-i18n="tagIsolation">Izolace</span></div>
+                    </div>
+                    <div class="exercise-card">
+                        <div class="icon">🏹</div>
+                        <h3 data-i18n="exRdlTitle">Rumunský mrtvý tah</h3>
+                        <p data-i18n="exRdlDesc">Nejlepší cvik na hamstringy a hýždě.</p>
+                        <div class="tags"><span data-i18n="tagLegs">Nohy</span><span data-i18n="tagBack">Záda</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="nutrition" class="nutrition section-padding">
+            <div class="container">
+                <div class="exercises-header">
+                    <h2 data-i18n="nutritionTitle">Strava & Suplementy</h2>
+                    <p data-i18n="nutriProteinsDesc">Správná výživa je 70 % úspěchu. Zde jsou základní kameny tvého
+                        progresu.
+                    </p>
+                </div>
+                <div class="exercises-grid nutrition-grid">
+                    <div class="exercise-card">
+                        <div class="icon">🥩</div>
+                        <h3 data-i18n="nutriProteins">Bílkoviny</h3>
+                        <p data-i18n="nutriProteinsDesc">Základ stavebních kamenů svalů. Maso, vejce, luštěniny.</p>
+                        <div class="tags"><span data-i18n="tagStrength">Síla</span><span
+                                data-i18n="tagStability">Regenerace</span></div>
+                    </div>
+                    <div class="exercise-card">
+                        <div class="icon">🍚</div>
+                        <h3 data-i18n="nutriCarbs">Sacharidy</h3>
+                        <p data-i18n="nutriCarbsDesc">Hlavní zdroj energie. Rýže, brambory, ovesné vločky.</p>
+                        <div class="tags"><span data-i18n="tagEnergy">Energie</span><span
+                                data-i18n="tagFullBody">Výkon</span></div>
+                    </div>
+                    <div class="exercise-card">
+                        <div class="icon">🥑</div>
+                        <h3 data-i18n="nutriFats">Zdravé Tuky</h3>
+                        <p data-i18n="nutriFatsDesc">Důležité pro hormony. Ořechy, avokádo, olivový olej.</p>
+                        <div class="tags"><span data-i18n="tagStability">Zdraví</span><span
+                                data-i18n="tagHormones">Hormony</span></div>
+                    </div>
+                    <div class="exercise-card">
+                        <div class="icon">💊</div>
+                        <h3 data-i18n="nutriSupps">Suplementace</h3>
+                        <p data-i18n="nutriSuppsDesc">Doplňky pro maximální výkon a regeneraci.</p>
+                        <div class="tags"><span data-i18n="tagQuality">Kvalita</span><span
+                                data-i18n="tagSupplements">Doplňky</span></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="quote-banner">
+            <div class="container">
+                <blockquote data-i18n="quote2">"Tvé jediné limity jsou ty, které si vytvoříš ve své hlavě."</blockquote>
+            </div>
+        </section>
+    </main>
+
+    <footer id="contact">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <a href="#" class="logo">IronBase</a>
+                    <p data-i18n="footerRights">&copy; 2026 IronBase Fitness. Make Sweat, Not Excuses.</p>
+                </div>
+                <div class="footer-contact-info">
+                    <h4 data-i18n="navContact">Kontakt</h4>
+                    <p><strong>IronBase Fitness</strong></p>
+                    <p><a href="mailto:ironbase@seznam.cz">ironbase@seznam.cz</a></p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

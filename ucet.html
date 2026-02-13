@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="cz">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-i18n="pageTitle">IronBase Fitness - Účet</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body class="subpage">
+    <header>
+        <div class="container">
+            <a href="index.html" class="logo">IronBase</a>
+            <nav>
+                <ul>
+                    <li><a href="index.html" data-i18n="navHome">Domů</a></li>
+                    <li><a href="index.html#exercises" data-i18n="navExercises">Cviky</a></li>
+                    <li><a href="index.html#nutrition" data-i18n="navNutrition">Strava</a></li>
+                    <li><a href="clenska-zona.html" data-i18n="navMembership">Členská zóna</a></li>
+                    <li><a href="poradna.html" data-i18n="navQa">Poradna</a></li>
+                    <li><a href="songy.html" data-i18n="navSongs">Songy</a></li>
+                    <li><a href="kontakt.html" data-i18n="navContact">Kontakt</a></li>
+                </ul>
+            </nav>
+            <div class="header-actions">
+                <div class="lang-switch">
+                    <button class="lang-btn active" data-lang="cz">CZ</button>
+                    <button class="lang-btn" data-lang="sk">SK</button>
+                    <button class="lang-btn" data-lang="en">EN</button>
+                </div>
+                <div class="auth-buttons" style="display: flex; gap: 0.5rem;">
+                    <a href="ucet.html#login" id="login-btn-nav" class="btn-secondary" style="padding: 0.5rem 1rem;"
+                        data-i18n="btnLogin">Přihlásit se</a>
+                    <a href="ucet.html#register" id="register-btn-nav" class="btn-primary" style="padding: 0.5rem 1rem;"
+                        data-i18n="heroBtnRegister">Registrace</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="container section-padding">
+        <section id="auth-section" class="auth-section">
+            <div class="auth-toggle-container glass-card">
+                <button id="show-login-btn" class="auth-toggle-btn active" onclick="switchAuthTab('login')"
+                    data-i18n="loginTitle">Přihlášení</button>
+                <button id="show-register-btn" class="auth-toggle-btn" onclick="switchAuthTab('register')"
+                    data-i18n="registerTitle">Registrace</button>
+            </div>
+
+            <div id="auth-forms" class="auth-forms-wrapper">
+                <div id="login-form-container" id="login" class="glass-card auth-card">
+                    <h3 data-i18n="loginTitle">Přihlášení</h3>
+                    <form id="login-form">
+                        <div class="form-group">
+                            <label for="login-email" data-i18n="loginEmail">Email</label>
+                            <input type="email" id="login-email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="login-pass" data-i18n="loginPass">Heslo</label>
+                            <input type="password" id="login-pass" required>
+                        </div>
+                        <button type="submit" class="btn-primary full-width" data-i18n="btnLogin">Přihlásit se</button>
+                    </form>
+                    <p class="auth-switch-text">
+                        <span data-i18n="noAccount">Nemáš účet?</span>
+                        <a href="javascript:void(0)" onclick="switchAuthTab('register')"
+                            data-i18n="registerTitle">Registrace</a>
+                    </p>
+                </div>
+
+                <div id="register-form-container" id="register" class="glass-card auth-card hidden">
+                    <h3 data-i18n="registerTitle">Registrace</h3>
+                    <form id="register-form">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="reg-first-name" data-i18n="regFirstName">Jméno</label>
+                                <input type="text" id="reg-first-name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="reg-last-name" data-i18n="regLastName">Příjmení</label>
+                                <input type="text" id="reg-last-name" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="reg-email" data-i18n="regEmail">Email</label>
+                            <input type="email" id="reg-email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="reg-pass" data-i18n="regPass">Heslo</label>
+                            <input type="password" id="reg-pass" required>
+                        </div>
+                        <button type="submit" class="btn-primary full-width" data-i18n="btnRegister">Vytvořit
+                            účet</button>
+                    </form>
+                    <p class="auth-switch-text">
+                        <span data-i18n="hasAccount">Již máš účet?</span>
+                        <a href="javascript:void(0)" onclick="switchAuthTab('login')"
+                            data-i18n="loginTitle">Přihlášení</a>
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- All Users Section -->
+        <section id="all-accounts" class="section-padding" style="margin-top: 4rem;">
+            <h3 style="margin-bottom: 2rem; color: var(--primary-color);">Všechny vytvořené účty</h3>
+            <div id="all-users-list" class="users-gallery-grid"
+                style="display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 1rem;">
+                <!-- Filled by JS -->
+            </div>
+        </section>
+
+        <section id="user-profile" class="profile-container glass-card hidden">
+            <div class="profile-header">
+                <div class="avatar-container">
+                    <label for="profile-photo-input" class="avatar-label" title="Změnit fotku">
+                        <div id="profile-avatar" class="avatar">👤</div>
+                        <div class="avatar-overlay">📷</div>
+                    </label>
+                    <input type="file" id="profile-photo-input" accept="image/*" class="hidden">
+                </div>
+                <div class="user-info">
+                    <h3 id="profile-name">Uživatel</h3>
+                    <p id="profile-email">email@example.com</p>
+                    <div style="display: flex; gap: 0.5rem; flex-wrap: wrap; margin-top: 0.5rem;">
+                        <span class="badge" data-i18n="badgeMember">Člen IronBase</span>
+                        <button id="edit-profile-btn" class="btn-secondary"
+                            style="padding: 0.2rem 0.6rem; font-size: 0.75rem;">Upravit profil</button>
+                    </div>
+                </div>
+                <button id="logout-btn" class="btn-secondary" data-i18n="btnLogout">Odhlásit se</button>
+            </div>
+
+            <div class="profile-content">
+                <div class="stats-section glass-card">
+                    <h3 data-i18n="personalStats">Osobní Statistiky</h3>
+                    <form id="stats-form">
+                        <div class="form-group">
+                            <label for="height" data-i18n="statHeight">Výška (cm)</label>
+                            <input type="number" id="height">
+                        </div>
+                        <div class="form-group">
+                            <label for="weight" data-i18n="statWeight">Váha (kg)</label>
+                            <input type="number" id="weight">
+                        </div>
+                        <div class="form-group">
+                            <label for="age" data-i18n="statAge">Věk</label>
+                            <input type="number" id="age">
+                        </div>
+                        <div class="form-group">
+                            <label for="gender" data-i18n="statGender">Pohlaví</label>
+                            <select id="gender" class="profile-select" style="width: 100%;">
+                                <option value="" data-i18n="genderSecret">Neuvedeno</option>
+                                <option value="male" data-i18n="genderMale">Muž</option>
+                                <option value="female" data-i18n="genderFemale">Žena</option>
+                                <option value="other" data-i18n="genderOther">Jiné</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="fitness-goal" data-i18n="statGoal">Tvůj hlavní cíl</label>
+                            <input type="text" id="fitness-goal" data-i18n-placeholder="statGoalPlaceholder"
+                                placeholder="Napiš, čeho chceš dosáhnout...">
+                        </div>
+                        <div class="form-group">
+                            <label for="training-time" data-i18n="statTrainingTime">Kdy nejraději cvičíš?</label>
+                            <select id="training-time" class="profile-select" style="width: 100%;">
+                                <option value="morning" data-i18n="timeMorning">Ráno</option>
+                                <option value="afternoon" data-i18n="timeAfternoon">Odpoledne</option>
+                                <option value="evening" data-i18n="timeEvening">Večer</option>
+                                <option value="night" data-i18n="timeNight">V noci</option>
+                            </select>
+                        </div>
+                        <div id="bmi-result" class="bmi-display"
+                            style="display: none; margin-bottom: 1.5rem; padding: 1rem; border-radius: 12px; text-align: center; border: 1px solid var(--glass-border);">
+                            <div
+                                style="font-size: 0.8rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 1px;">
+                                Vaše BMI</div>
+                            <div id="bmi-value" style="font-size: 2rem; font-weight: 800; margin: 0.2rem 0;">--</div>
+                            <div id="bmi-status" style="font-size: 0.9rem; font-weight: 600;">--</div>
+                        </div>
+                        <button type="submit" class="btn-primary" data-i18n="btnSave">Uložit statistiky</button>
+                    </form>
+                </div>
+
+                <div class="plan-section glass-card">
+                    <div
+                        style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 2rem;">
+                        <h3 data-i18n="myPlan" style="margin-bottom: 0;">Můj Tréninkový Plán</h3>
+                        <select id="goal-selector" class="btn-secondary"
+                            style="padding: 0.5rem; border-radius: 8px; font-size: 0.8rem; cursor: pointer;">
+                            <option value="custom" data-i18n="planCustom">Vlastní</option>
+                            <option value="strength" data-i18n="planStrength">Síla</option>
+                            <option value="hypertrophy" data-i18n="planHypertrophy">Budování svalů</option>
+                            <option value="weightloss" data-i18n="planWeightLoss">Hubnutí</option>
+                        </select>
+                    </div>
+                    <ul id="workout-plan-list" class="plan-list"></ul>
+                    <form id="add-exercise-form">
+                        <input type="text" id="new-exercise" data-i18n-placeholder="addExercise"
+                            placeholder="Přidat cvik k plánu">
+                        <button type="submit" class="btn-primary">+</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Photo Modal -->
+    <div id="photo-modal" class="modal hidden">
+        <div class="modal-content glass-card">
+            <h3 data-i18n="photoModalTitle">Upravit profilovou fotku</h3>
+            <p style="font-size: 0.9rem; color: var(--text-muted); margin-bottom: 1rem;">Potáhni pro vycentrování</p>
+            <div class="photo-preview-container">
+                <div class="crop-frame" id="crop-frame">
+                    <img id="modal-preview-img" src="" alt="Preview" style="cursor: move; transform-origin: center;">
+                </div>
+            </div>
+            <div class="zoom-controls" style="margin-bottom: 2rem;">
+                <input type="range" id="zoom-slider" min="1" max="3" step="0.01" value="1"
+                    style="width: 100%; accent-color: var(--primary-color);">
+            </div>
+            <div class="modal-actions">
+                <button id="cancel-photo-btn" class="btn-secondary" data-i18n="btnCancel">Zrušit</button>
+                <button id="confirm-photo-btn" class="btn-primary" data-i18n="btnSave">Uložit</button>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <p data-i18n="footerRights">&copy; 2026 IronBase Fitness. Make Sweat, Not Excuses.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

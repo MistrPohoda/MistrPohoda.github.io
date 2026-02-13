@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="cz">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-i18n="songsPageTitle">Motivační Songy | IronBase Fitness</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <a href="index.html" class="logo">IronBase</a>
+            <nav>
+                <ul>
+                    <li><a href="index.html" data-i18n="navHome">Domů</a></li>
+                    <li><a href="index.html#exercises" data-i18n="navExercises">Cviky</a></li>
+                    <li><a href="songy.html" class="active" data-i18n="navSongs">Songy</a></li>
+                    <li><a href="clenska-zona.html" data-i18n="navMembership">Členská zóna</a></li>
+                    <li><a href="poradna.html" data-i18n="navQa">Poradna</a></li>
+                    <li><a href="kontakt.html" data-i18n="navContact">Kontakt</a></li>
+                </ul>
+            </nav>
+            <div class="header-actions">
+                <div class="lang-switch">
+                    <button class="lang-btn active" data-lang="cz">CZ</button>
+                    <button class="lang-btn" data-lang="sk">SK</button>
+                    <button class="lang-btn" data-lang="en">EN</button>
+                </div>
+                <div class="auth-buttons" style="display: flex; gap: 0.5rem;">
+                    <a href="ucet.html#login" id="login-btn-nav" class="btn-secondary" style="padding: 0.5rem 1rem;"
+                        data-i18n="btnLogin">Přihlásit se</a>
+                    <a href="ucet.html#register" id="register-btn-nav" class="btn-primary" style="padding: 0.5rem 1rem;"
+                        data-i18n="heroBtnRegister">Registrace</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="section-padding">
+        <section class="hero-small" style="text-align: center; margin-bottom: 4rem;">
+            <div class="container">
+                <h1 data-i18n="songsTitle" style="font-size: 3.5rem; margin-bottom: 1rem;">Motivační Songy</h1>
+                <p data-i18n="songsSubtitle" style="color: var(--text-muted); max-width: 600px; margin: 0 auto;">
+                    Nejlepší hudba, která tě nakopne k maximálnímu výkonu. Vyber si svůj vibe.</p>
+            </div>
+        </section>
+
+        <section class="songs-grid container">
+            <h2 data-i18n="catHipHop"
+                style="margin-bottom: 2rem; border-left: 4px solid var(--primary-color); padding-left: 1rem;">Gym
+                Hip-Hop / Rap</h2>
+            <div class="exercises-grid" style="margin-bottom: 5rem;">
+                <div class="exercise-card glass-card">
+                    <div class="icon">🎙️</div>
+                    <h3>Till I Collapse</h3>
+                    <p>Eminem ft. Nate Dogg</p>
+                    <div class="tags"><span>Classic</span><span>High Energy</span></div>
+                </div>
+                <div class="exercise-card glass-card">
+                    <div class="icon">🔥</div>
+                    <h3>Power</h3>
+                    <p>Kanye West</p>
+                    <div class="tags"><span>Hype</span><span>Rhythm</span></div>
+                </div>
+                <div class="exercise-card glass-card">
+                    <div class="icon">🛡️</div>
+                    <h3>Remember the Name</h3>
+                    <p>Fort Minor</p>
+                    <div class="tags"><span>Focus</span><span>Legacy</span></div>
+                </div>
+            </div>
+
+            <h2 data-i18n="catRock"
+                style="margin-bottom: 2rem; border-left: 4px solid var(--primary-color); padding-left: 1rem;">Hard Rock
+                / Metal</h2>
+            <div class="exercises-grid" style="margin-bottom: 5rem;">
+                <div class="exercise-card glass-card">
+                    <div class="icon">🎸</div>
+                    <h3>Thunderstruck</h3>
+                    <p>AC/DC</p>
+                    <div class="tags"><span>Rock</span><span>Adrenaline</span></div>
+                </div>
+                <div class="exercise-card glass-card">
+                    <div class="icon">⛓️</div>
+                    <h3>Enter Sandman</h3>
+                    <p>Metallica</p>
+                    <div class="tags"><span>Heavy</span><span>Power</span></div>
+                </div>
+                <div class="exercise-card glass-card">
+                    <div class="icon">🐺</div>
+                    <h3>The Animal</h3>
+                    <p>Disturbed</p>
+                    <div class="tags"><span>Aggressive</span><span>Intensity</span></div>
+                </div>
+            </div>
+
+            <h2 data-i18n="catEpic"
+                style="margin-bottom: 2rem; border-left: 4px solid var(--primary-color); padding-left: 1rem;">Epic /
+                Cinematic</h2>
+            <div class="exercises-grid" style="margin-bottom: 5rem;">
+                <div class="exercise-card glass-card">
+                    <div class="icon">⚔️</div>
+                    <h3>Victory</h3>
+                    <p>Two Steps From Hell</p>
+                    <div class="tags"><span>Orchestral</span><span>Heroic</span></div>
+                </div>
+                <div class="exercise-card glass-card">
+                    <div class="icon">🌌</div>
+                    <h3>Star Sky</h3>
+                    <p>Two Steps From Hell</p>
+                    <div class="tags"><span>Emotional</span><span>Power</span></div>
+                </div>
+                <div class="exercise-card glass-card">
+                    <div class="icon">🏔️</div>
+                    <h3>Legendary</h3>
+                    <p>Welshly Arms</p>
+                    <div class="tags"><span>Modern</span><span>Anthem</span></div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">IronBase</div>
+                <p data-i18n="footerRights">© 2026 IronBase Fitness. Make Sweat, Not Excuses.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

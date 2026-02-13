@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="cz">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-i18n="pageTitle">IronBase Fitness - Poradna</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <a href="index.html" class="logo">IronBase</a>
+            <nav>
+                <ul>
+                    <li><a href="index.html" data-i18n="navHome">Domů</a></li>
+                    <li><a href="index.html#exercises" data-i18n="navExercises">Cviky</a></li>
+                    <li><a href="index.html#nutrition" data-i18n="navNutrition">Strava</a></li>
+                    <li><a href="clenska-zona.html" data-i18n="navMembership">Členská zóna</a></li>
+                    <li><a href="poradna.html" class="active" data-i18n="navQa">Poradna</a></li>
+                    <li><a href="songy.html" data-i18n="navSongs">Songy</a></li>
+                    <li><a href="kontakt.html" data-i18n="navContact">Kontakt</a></li>
+                </ul>
+            </nav>
+            <div class="header-actions">
+                <div class="lang-switch">
+                    <button class="lang-btn active" data-lang="cz">CZ</button>
+                    <button class="lang-btn" data-lang="sk">SK</button>
+                    <button class="lang-btn" data-lang="en">EN</button>
+                </div>
+                <a href="ucet.html#register" id="register-btn-nav" class="btn-primary" style="padding: 0.5rem 1rem;"
+                    data-i18n="heroBtnRegister">Registrace</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section id="qa" class="qa-section" style="padding-top: 120px;">
+            <div class="container">
+                <h2 data-i18n="qaTitle">Poradna & Q&A</h2>
+                <div class="qa-content">
+                    <div class="qa-form-container">
+                        <h3 data-i18n="qaAskTitle">Máš otázku?</h3>
+                        <p data-i18n="qaAskDesc">Zeptej se našich trenérů nebo komunity.</p>
+                        <form id="qa-form">
+                            <div class="input-group">
+                                <input type="text" id="qa-name" data-i18n-placeholder="placeholderName"
+                                    placeholder="Tvoje jméno" required>
+                            </div>
+                            <div class="input-group">
+                                <textarea id="qa-question" data-i18n-placeholder="placeholderQuestion"
+                                    placeholder="Na co se chceš zeptat ohledně cvičení?" rows="4" required></textarea>
+                            </div>
+                            <button type="submit" class="btn-primary" data-i18n="btnSendQuestion">Odoslať
+                                otázku</button>
+                        </form>
+                    </div>
+                    <div class="qa-list" id="qa-list">
+                        <!-- Example Questions -->
+                        <div class="qa-item">
+                            <div class="question">
+                                <strong>Martin:</strong> <span data-i18n="qaEx1Q">Ako často mám cvičiť brucho?</span>
+                            </div>
+                            <div class="answer">
+                                <strong><span data-i18n="trainerName">Tým IronBase</span>:</strong> <span
+                                    data-i18n="qaEx1A">Břicho je sval jako každý jiný, ale regeneruje rychleji.
+                                    Doporučuji 2-3x týdně s důrazom na techniku, nie na stovky opakování. Skús Plank
+                                    ebo dvíhaní nohou.</span>
+                            </div>
+                        </div>
+                        <div class="qa-item">
+                            <div class="question">
+                                <strong>Petra:</strong> <span data-i18n="qaEx2Q">Je proteín nutný ihneď po
+                                    tréningu?</span>
+                            </div>
+                            <div class="answer">
+                                <strong><span data-i18n="trainerName">Tým IronBase</span>:</strong> <span
+                                    data-i18n="qaEx2A">Není to "nutné" okamžitě, ale je to dobré pro nastartování
+                                    regenerace. Důležitější je ale celkový denní příjem bílkovin.</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer id="contact">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <a href="index.html" class="logo">IronBase</a>
+                    <p data-i18n="footerRights">&copy; 2026 IronBase Fitness. Make Sweat, Not Excuses.</p>
+                </div>
+                <div class="footer-contact-info">
+                    <h4 data-i18n="navContact">Kontakt</h4>
+                    <p><strong>IronBase Fitness</strong></p>
+                    <p><a href="mailto:ironbase@seznam.cz">ironbase@seznam.cz</a></p>
+                </div>
+                <div class="footer-links">
+
+
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
